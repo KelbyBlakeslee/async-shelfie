@@ -17,3 +17,8 @@ massive(CONNECTION_STRING).then((db) => {
     console.log('db connected')
     app.set('db', db)
 })
+
+
+app.listen(SERVER_PORT, () => {
+    console.log(`We are many, You are one on ${SERVER_PORT}`)
+})
