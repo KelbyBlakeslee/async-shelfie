@@ -5,6 +5,7 @@ const express = require('express')
     , bodyParser = require('body-parser');
 
 
+
 const app = express();
 
 
@@ -13,12 +14,28 @@ const {
     SERVER_PORT
 } = process.env
 
+
+//massive connections 
 massive(CONNECTION_STRING).then((db) => {
     console.log('db connected')
     app.set('db', db)
 })
 
+app.get('/api/view_bins', (req, res, next) => {
+    req.app.get('db').view_bins().then(bins => {
+        res.status(200).send(bins)
+    }).catch(errorMessage => {
+        console.log(errorMessage)
+    })
+})
 
+
+
+
+
+
+
+//SERVER
 app.listen(SERVER_PORT, () => {
     console.log(`We are many, You are one on ${SERVER_PORT}`)
 })
