@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 
 
+
 class ShelfA extends Component {
     constructor() {
         super();
@@ -15,7 +16,7 @@ class ShelfA extends Component {
     render() {
         return (
             <div>
-            <button>Hello</button>
+            <h1>Hi</h1>
             </div>
         )
     }

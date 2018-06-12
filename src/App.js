@@ -1,10 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import { HashRouter, Route, Switch, Link } from 'react-router-dom';
-import ShelfA from './shelfs/shelfA/ShelfA';
-import ShelfB from './shelfs/shelfB/ShelfB';
-import ShelfC from './shelfs/shelfC/ShelfC';
-import ShelfD from './shelfs/shelfD/ShelfD';
+import Routes from './routes/Routes';
 
 
 class App extends Component {
@@ -22,21 +18,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <HashRouter>
-          <Switch>
-            <Route path="/ShelfA" component={ShelfA} />
-            <Route path="/ShelfB" component={ShelfB} />
-            <Route path="/ShelfC" component={ShelfC} />
-            <Route path="/ShlefD" component={ShelfD} />
-          </Switch>
-        </HashRouter>
-        <div>
-          <Link to="/ShelfA"><button>ShelfA</button></Link>
-          <Link to="/ShelfB"><button>ShelfB</button></Link>
-          <Link to="/ShelfC"><button>ShelfC</button></Link>
-          <Link to="/ShelfD"><button>shelfD</button></Link>
-        </div>
-
+        {Routes}
       </div>
     );
   }

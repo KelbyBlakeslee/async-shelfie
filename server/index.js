@@ -29,7 +29,16 @@ app.get('/api/view_bins', (req, res, next) => {
     })
 })
 
-
+app.post('api/create_bin', (req, res, next) => {
+    req.app.get('db')
+        .create_bin([req.body.userInput, req.body.productName, req.body.productPrice])
+        .then(repsonse => {
+            console.log('success');
+            res.status(200).send(response)
+        }).catch(errorMessage => {
+            console.log(errorMessage)
+        })
+})
 
 
 
