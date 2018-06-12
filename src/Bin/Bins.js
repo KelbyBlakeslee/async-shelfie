@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { Component } from 'react';
+import { HashRouter } from 'react-router-dom';
 
 
 
@@ -7,7 +8,7 @@ class Bins extends Component {
         super();
 
         this.state = {
-            
+
         }
     }
 

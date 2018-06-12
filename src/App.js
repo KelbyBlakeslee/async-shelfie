@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import { HashRouter, Route, Switch } from 'react-router-dom';
+import { HashRouter, Route, Switch, Link } from 'react-router-dom';
 import ShelfA from './shelfs/shelfA/ShelfA';
 import ShelfB from './shelfs/shelfB/ShelfB';
 import ShelfC from './shelfs/shelfC/ShelfC';
@@ -31,7 +31,10 @@ class App extends Component {
           </Switch>
         </HashRouter>
         <div>
-          <button onClick={this.ShelfA}>Shelf A</button>
+          <Link to="/ShelfA"><button>ShelfA</button></Link>
+          <Link to="/ShelfB"><button>ShelfB</button></Link>
+          <Link to="/ShelfC"><button>ShelfC</button></Link>
+          <Link to="/ShelfD"><button>shelfD</button></Link>
         </div>
 
       </div>
