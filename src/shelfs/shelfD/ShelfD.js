@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
-import { HashRouter } from 'react-router-dom';
 
 
-class Shelfs extends Component {
+
+class ShelfD extends Component {
     constructor() {
         super();
 
-       this.state = {
+        this.state = {
 
-       } 
+        }
     }
 
 
@@ -20,3 +20,5 @@ class Shelfs extends Component {
         )
     }
 }
+
+export default ShelfD;
