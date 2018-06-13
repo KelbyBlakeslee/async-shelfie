@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import { Link } from 'react-router-dom'
 
 
 
@@ -16,7 +16,7 @@ class ShelfB extends Component {
     render() {
         return (
             <div>
-                <h2>hello</h2>
+                <Link to="/Bins"><button>Bin 1</button></Link>
             </div>
         )
     }

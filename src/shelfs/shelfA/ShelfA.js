@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import Bins from '../../Bin/Bins';
-import { Link, Switch } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 
 
