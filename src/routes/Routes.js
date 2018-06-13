@@ -1,5 +1,5 @@
 import React from 'react';
-import { HashRouter, Switch, Links, Route } from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
 import Home from '../home/Home';
 import ShelfA from '../shelfs/shelfA/ShelfA';
 import ShelfB from '../shelfs/shelfB/ShelfB';

@@ -11,13 +11,17 @@ class Header extends Component {
         }
     }
 
+    imageOnClick() {
+        console.log("clicked!")
+    }
+
 
 
     render() {
         return (
             <div>
                 <div className="header-main">
-                    <img className="shelfie-logo" src="https://raw.githubusercontent.com/DevMountain/simulation-1-async/master/assets/logo.png" alt="logo.png"/>
+                    <img className="shelfie-logo" onClick={this.imageOnClick} src="https://raw.githubusercontent.com/DevMountain/simulation-1-async/master/assets/logo.png" alt="logo.png"/>
                     <h1>SHELFIE</h1>
                 </div>
             </div>

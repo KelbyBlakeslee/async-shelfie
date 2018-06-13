@@ -1,18 +1,22 @@
-import React, { Component } from 'react';
-import Routes from '../routes/Routes';
-import { Link, Switch } from 'react-router-dom';
-import ShelfA from '../shelfs/shelfA/ShelfA';
-import ShelfB from '../shelfs/shelfB/ShelfB';
-import ShelfC from '../shelfs/shelfC/ShelfC';
-import ShelfD from '../shelfs/shelfD/ShelfD';
+import React from 'react';
+import { Link } from 'react-router-dom';
+
 
 export default function Home() {
     return (
         <div>
+            <div>
                 <Link to="/ShelfA" >Shelf A</Link>
+            </div>
+            <div>
                 <Link to="/ShelfB" >Shelf B</Link>
+            </div>
+            <div>
                 <Link to="/ShelfC" >Shelf C</Link>
+            </div>
+            <div>
                 <Link to="/ShelfD" >Shelf D</Link>
+            </div>
         </div>
     )
 
