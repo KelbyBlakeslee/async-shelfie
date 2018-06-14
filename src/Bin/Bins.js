@@ -10,7 +10,8 @@ class Bins extends Component {
             input_box: '',
             user_input: '',
             product_name: '',
-            product_price: ''
+            product_price: '',
+            bin_id: []
         }
 
         this.handleUserInput = this.handleUserInput.bind(this);
@@ -21,8 +22,15 @@ class Bins extends Component {
         this.setState({ input_box: e.target.value })
     }
 
-    getNewBin(bin_id) {
+    getNewBin(new_bin) {
         axios.post('/api/create_bin', { 'userInput': this.state.user_input, 'productName': this.state.product_name, 'productPrice': this.state.product_price})
+        .then(response => {
+            console.log(response)
+        })
+    }
+
+    getBinId(bin_id) {
+        axios.get('/api/view_bins/:id', {bin_id: this.state.bin_id})
         .then(response => {
             console.log(response)
         })

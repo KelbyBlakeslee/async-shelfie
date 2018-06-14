@@ -29,6 +29,14 @@ app.get('/api/view_bins', (req, res, next) => {
     })
 })
 
+app.get('api/view_bins/:id', (req, res, next) => {
+    req.app.get('db').view_bins().then(bins => {
+        res.status(200).send(bins)
+    }).catch(errorMessage => {
+        console.log(errorMessage)
+    })
+})
+
 app.post('api/create_bin', (req, res, next) => {
     req.app.get('db')
         .create_bin([req.body.userInput, req.body.productName, req.body.productPrice])
