@@ -21,7 +21,7 @@ massive(CONNECTION_STRING).then((db) => {
     app.set('db', db)
 })
 
-app.get('/api/view_bins', (req, res, next) => {
+app.get('/api/view_bins', (req, res) => {
     req.app.get('db').view_bins().then(bins => {
         res.status(200).send(bins)
     }).catch(errorMessage => {
@@ -29,7 +29,7 @@ app.get('/api/view_bins', (req, res, next) => {
     })
 })
 
-app.get('api/view_bins/:id', (req, res, next) => {
+app.get('api/view_bins/:id', (req, res) => {
     req.app.get('db').view_bins().then(bins => {
         res.status(200).send(bins)
     }).catch(errorMessage => {
@@ -37,7 +37,7 @@ app.get('api/view_bins/:id', (req, res, next) => {
     })
 })
 
-app.post('api/create_bin', (req, res, next) => {
+app.post('api/create_bin', (req, res) => {
     req.app.get('db')
         .create_bin([req.body.userInput, req.body.productName, req.body.productPrice])
         .then(repsonse => {

@@ -9,12 +9,12 @@ class ShelfA extends Component {
         super();
 
         this.state = {
-            bin_id: {}
+            fullBin: {}
         }
     }
 
     getBinId(bin_id) {
-        axios.get('/api/view_bins/:id', {bin_id: this.state.bin_id})
+        axios.get('/api/view_bins/:id', {'fullBin': this.state.bin_id, 'binId': bin_id})
         .then(response => {
             console.log(response)
         })
