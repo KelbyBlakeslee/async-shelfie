@@ -9,7 +9,7 @@ class ShelfA extends Component {
         super();
 
         this.state = {
-            fullBin: {}
+            bin_id: {}
         }
     }
 
