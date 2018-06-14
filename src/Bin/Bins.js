@@ -7,19 +7,27 @@ class Bins extends Component {
         super();
 
         this.state = {
-            input_box: '',
+            name_box: '',
+            price_box: '',
             user_input: '',
             product_name: '',
-            product_price: '',
-            bin_id: []
+            product_price: ''
         }
 
-        this.handleUserInput = this.handleUserInput.bind(this);
+
+        this.handleNameInput = this.handleNameInput.bind(this);
+        this.handlePriceInput = this.handlePriceInput.bind(this);
+
     }
 
-    handleUserInput(e) {
+    handleNameInput(e) {
         e.preventDefault()
-        this.setState({ input_box: e.target.value })
+        this.setState({ name_box: e.target.value })
+    }
+
+    handlePriceInput(e) {
+        e.preventDefault()
+        this.setState({ price_box: e.target.value })
     }
 
     getNewBin(new_bin) {
@@ -44,9 +52,9 @@ class Bins extends Component {
                 <div>
                     <img src="" alt="" />
                     <p>Name</p>
-                    <input value={this.state.input_box} placeholder='' onChange={(e) => this.handleUserInput(e)} />
+                    <input value={this.state.name_box} placeholder='Enter Name' onChange={(e) => this.handleNameInput(e)} />
                     <p>Price</p>
-                    <input value={this.state.input_box} placeholder='' onChange={(e) => this.handleUserInput(e)} />
+                    <input value={this.state.price_box} placeholder='Enter Price' onChange={(e) => this.handlePriceInput(e)} />
                     <button>EDIT</button>
                     <button>DELETE</button>
                 </div>
