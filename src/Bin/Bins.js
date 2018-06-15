@@ -31,10 +31,10 @@ class Bins extends Component {
     }
 
     getNewBin(new_bin) {
-        axios.post('/api/create_bin', { 'userInput': this.state.user_input, 'productName': this.state.product_name, 'productPrice': this.state.product_price})
-        .then(response => {
-            console.log(response)
-        })
+        axios.post('/api/create_bin', { 'userInput': this.state.user_input, 'productName': this.state.product_name, 'productPrice': this.state.product_price })
+            .then(response => {
+                console.log(response)
+            })
     }
 
 
@@ -42,14 +42,27 @@ class Bins extends Component {
     render() {
         return (
             <div>
+                <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"></link>
                 <div>
-                    <img src="" alt="" />
-                    <p>Name</p>
-                    <input value={this.state.name_box} placeholder='Enter Name' onChange={(e) => this.handleNameInput(e)} />
-                    <p>Price</p>
-                    <input value={this.state.price_box} placeholder='Enter Price' onChange={(e) => this.handlePriceInput(e)} />
-                    <button>EDIT</button>
-                    <button>DELETE</button>
+                    <div>
+                        <img src="" alt="" />
+                    </div>
+                    <div>
+                        <p>Name</p>
+                    </div>
+                    <div>
+                        <input value={this.state.name_box} placeholder='Enter Name' onChange={(e) => this.handleNameInput(e)} />
+                    </div>
+                    <div>
+                        <p>Price</p>
+                    </div>
+                    <div>
+                        <input value={this.state.price_box} placeholder='Enter Price' onChange={(e) => this.handlePriceInput(e)} />
+                    </div>
+                    <div>
+                        <button>EDIT</button>
+                        <button>DELETE</button>
+                    </div>
                 </div>
             </div>
         )
