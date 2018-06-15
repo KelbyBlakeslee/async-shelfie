@@ -7,17 +7,30 @@
 }
 
 .Bin-1 {
-    padding: 8px;
+    padding: 10px;
 }
 
 .Bin-2 {
-    padding: 8px;
+    padding: 10px;
 }
 
 .Bin-3 {
-    padding: 8px;
+    padding: 10px;
 }
 
 .Bin-4 {
-    padding: 8px;
+    padding: 10px;
+}
+
+.Bin-button {
+    font-family: 'Open Sans', sans-serif;
+    height: 110px;
+    width: 35%;
+    border-radius: 10px;
+    border: none;
+    background: #ED6B5A;
+    font-size: 40px;
+    font-weight: 900;
+    padding-right: 100px; 
+    color: white;
 }
