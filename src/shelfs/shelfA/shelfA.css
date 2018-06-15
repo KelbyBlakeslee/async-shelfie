@@ -1,0 +1,23 @@
+.Div-around-buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-content: space-between;
+    margin: 15px;
+}
+
+.Bin-1 {
+    padding: 8px;
+}
+
+.Bin-2 {
+    padding: 8px;
+}
+
+.Bin-3 {
+    padding: 8px;
+}
+
+.Bin-4 {
+    padding: 8px;
+}

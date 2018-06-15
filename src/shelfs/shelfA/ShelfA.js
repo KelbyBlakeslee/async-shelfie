@@ -23,11 +23,19 @@ class ShelfA extends Component {
 
     render() {
         return (
-            <div>
-                <Link to="/Bins"><button className="Bin-button" onClick={() => this.getBinId('A1')}>Bin 1</button></Link>
-                <Link to="/Bins"><button className="Bin-button" onClick={() => this.getBinId('A2')}>Bin 2</button></Link>
-                <Link to="/Bins"><button className="Bin-button" onClick={() => this.getBinId('A3')}>Bin 3</button></Link>
-                <Link to="/Bins"><button className="Bin-button" onClick={() => this.getBinId('A4')}>Bin 4</button></Link>
+            <div className="Div-around-buttons">
+                <div className="Bin-1">
+                    <Link to="/Bins"><button className="Bin-button" onClick={() => this.getBinId('A1')}>Bin 1</button></Link>
+                </div>
+                <div className="Bin-2">
+                    <Link to="/Bins"><button className="Bin-button" onClick={() => this.getBinId('A2')}>Bin 2</button></Link>
+                </div>
+                <div className="Bin-3">
+                    <Link to="/Bins"><button className="Bin-button" onClick={() => this.getBinId('A3')}>Bin 3</button></Link>
+                </div>
+                <div className="Bin-4">
+                    <Link to="/Bins"><button className="Bin-button" onClick={() => this.getBinId('A4')}>Bin 4</button></Link>
+                </div>
             </div>
         )
     }
