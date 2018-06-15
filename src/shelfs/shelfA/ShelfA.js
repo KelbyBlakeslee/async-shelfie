@@ -25,6 +25,10 @@ class ShelfA extends Component {
         return (
             <div>
                 <Link to="/Bins"><button onClick={() => this.getBinId('A1')}>Bin 1</button></Link>
+                <Link to="/Bins"><button onClick={() => this.getBinId('A2')}>Bin 2</button></Link>
+                <Link to="/Bins"><button onClick={() => this.getBinId('A3')}>Bin 3</button></Link>
+                <Link to="/Bins"><button onClick={() => this.getBinId('A4')}>Bin 4</button></Link>
+
             </div>
         )
     }
