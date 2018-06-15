@@ -44,27 +44,26 @@ class Bins extends Component {
             <div>
                 <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"></link>
                 <div>
-                    <div>
-                        <img src="" alt="" />
-                    </div>
-                    <div>
-                        <p>Name</p>
-                    </div>
-                    <div>
-                        <input value={this.state.name_box} placeholder='Enter Name' onChange={(e) => this.handleNameInput(e)} />
-                    </div>
-                    <div>
-                        <p>Price</p>
-                    </div>
-                    <div>
-                        <input value={this.state.price_box} placeholder='Enter Price' onChange={(e) => this.handlePriceInput(e)} />
-                    </div>
-                    <div>
-                        <button>EDIT</button>
-                        <button>DELETE</button>
-                    </div>
+                    <img src="" alt="" />
+                </div>
+                <div className="div-name">
+                    <p className="name-text">Name</p>
+                </div>
+                <div className="div-name-box">
+                    <input className="name-input" value={this.state.name_box} placeholder='Enter Name' onChange={(e) => this.handleNameInput(e)} />
+                </div>
+                <div className="price-text-div">
+                    <p className="price-text">Price</p>
+                </div>
+                <div className="div-price-box">
+                    <input className="price-input" value={this.state.price_box} placeholder='Enter Price' onChange={(e) => this.handlePriceInput(e)} />
+                </div>
+                <div className="edit-delete-div">
+                    <button className="edit-delete-button">EDIT</button>
+                    <button>DELETE</button>
                 </div>
             </div>
+
         )
     }
 }
