@@ -1,0 +1,36 @@
+.Div-around-buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-content: space-between;
+    margin: 15px;
+}
+
+.Shelf-A {
+    padding: 10px;
+}
+
+.Shelf-B {
+    padding: 10px;
+}
+
+.Shelf-C {
+    padding: 10px;
+}
+
+.Shelf-D {
+    padding: 10px;
+}
+
+.Shelf-Button {
+    font-family: 'Open Sans', sans-serif;
+    height: 110px;
+    width: 35%;
+    border-radius: 10px;
+    border: none;
+    background: #d34735;
+    font-size: 40px;
+    font-weight: 700;
+    padding-right: 100px; 
+    color: white;
+}
