@@ -22,6 +22,7 @@ massive(CONNECTION_STRING).then((db) => {
 })
 
 app.get('/api/view_bins', (req, res) => {
+    console.log('hit it')
     req.app.get('db').view_bins().then(bins => {
         res.status(200).send(bins)
     }).catch(errorMessage => {
@@ -30,7 +31,9 @@ app.get('/api/view_bins', (req, res) => {
 })
 
 app.get('api/view_bins/:id', (req, res) => {
+    console.log('hit')
     req.app.get('db').view_bins().then(bins => {
+        console.log('hit')
         res.status(200).send(bins)
     }).catch(errorMessage => {
         console.log(errorMessage)
