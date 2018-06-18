@@ -14,17 +14,17 @@ class ShelfC extends Component {
     }
 
     getBinId(bin_id) {
-        axios.get('/api/view_bins/3', {'fullBin': this.state.bin_id, 'binId': bin_id})
-        .then(response => {
-            console.log(response)
-        })
+        axios.get('/api/view_bins/3', { 'fullBin': this.state.bin_id, 'binId': bin_id })
+            .then(response => {
+                console.log(response)
+            })
     }
 
 
     render() {
         return (
             <div className="Div-around-buttons">
-            <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"></link>
+                <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"></link>
                 <div className="Bin-1">
                     <Link to="/Bins"><button className="Bin-button" onClick={() => this.getBinId('C1')}>Bin 1</button></Link>
                 </div>
@@ -36,6 +36,9 @@ class ShelfC extends Component {
                 </div>
                 <div className="Bin-4">
                     <Link to="/Bins"><button className="Bin-button" onClick={() => this.getBinId('C4')}>Bin 4</button></Link>
+                </div>
+                <div className="add-bin">
+                    <Link to="/AddBin"><button className="Add-button">+ Add Inventory</button></Link>
                 </div>
             </div>
         )

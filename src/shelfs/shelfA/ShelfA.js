@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import './shelf.css';
-import AddBin from '../../Bin/AddBin';
 
 
 class ShelfA extends Component {
