@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import './shelf.css';
+import AddBin from '../../Bin/AddBin';
 
 
 class ShelfA extends Component {
@@ -24,7 +25,7 @@ class ShelfA extends Component {
     render() {
         return (
             <div className="Div-around-buttons">
-            <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"></link>
+                <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"></link>
                 <div className="Bin-1">
                     <Link to="/Bins"><button className="Bin-button" onClick={() => this.getBinId('A1')}>Bin 1</button></Link>
                 </div>
@@ -36,6 +37,9 @@ class ShelfA extends Component {
                 </div>
                 <div className="Bin-4">
                     <Link to="/Bins"><button className="Bin-button" onClick={() => this.getBinId('A4')}>Bin 4</button></Link>
+                    <div>
+                        <Link to="/AddBin"><button>+ Add Inventory</button></Link>
+                    </div>
                 </div>
             </div>
         )

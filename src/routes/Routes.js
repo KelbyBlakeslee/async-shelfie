@@ -6,6 +6,7 @@ import ShelfB from '../shelfs/shelfB/ShelfB';
 import ShelfC from '../shelfs/shelfC/ShelfC';
 import ShelfD from '../shelfs/shelfD/ShelfD';
 import Bins from '../Bin/Bins';
+import AddBin from '../Bin/AddBin';
 
 export default(
     
@@ -17,6 +18,7 @@ export default(
             <Route exact path="/ShelfC" component={ShelfC} />
             <Route exact path="/ShelfD" component={ShelfD} />
             <Route exact path="/Bins" component={Bins}/>
+            <Route exact path="/AddBin" component={AddBin} />
         </Switch>
     // </HashRouter>
 )
