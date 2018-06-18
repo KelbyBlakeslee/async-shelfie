@@ -1,4 +1,4 @@
 insert into Bin 
-(product, price, shelf)
+(image, product, price, shelf)
 values 
-($1, $2, $3);
+($1, $2, $3, $4);
