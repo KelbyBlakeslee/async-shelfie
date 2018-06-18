@@ -22,8 +22,9 @@ class Header extends Component {
         return (
             <div>
                 <div className="header-main">
-                    <Link to="/"><img className="shelfie-logo" onClick={this.imageOnClick} src="https://raw.githubusercontent.com/DevMountain/simulation-1-async/master/assets/logo.png" alt="logo.png"/></Link>
-                    <h1>SHELFIE</h1>
+                    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"></link>
+                    <Link to="/"><img className="shelfie-logo" onClick={this.imageOnClick} src="https://raw.githubusercontent.com/DevMountain/simulation-1-async/master/assets/logo.png" alt="logo.png" /></Link>
+                    <h1 className="header-shelfie">SHELFIE</h1>
                 </div>
             </div>
         )
