@@ -31,6 +31,22 @@
     background: #ED6B5A;
     font-size: 40px;
     font-weight: 900;
-    padding-right: 100px; 
+    padding-right: 170px; 
     color: white;
+}
+
+.add-bin {
+    padding: 20px;
+}
+
+.Add-button {
+    font-family: 'Open Sans', sans-serif;
+    height: 110px;
+    width: 36%;
+    border-radius: 10px;
+    border: none;
+    background: #ffb8af;
+    font-size: 40px;
+    font-weight: 900;
+    padding-right: 40px; 
 }

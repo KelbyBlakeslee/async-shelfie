@@ -37,8 +37,8 @@ class ShelfA extends Component {
                 </div>
                 <div className="Bin-4">
                     <Link to="/Bins"><button className="Bin-button" onClick={() => this.getBinId('A4')}>Bin 4</button></Link>
-                    <div>
-                        <Link to="/AddBin"><button>+ Add Inventory</button></Link>
+                    <div className="add-bin">
+                        <Link to="/AddBin"><button className="Add-button">+ Add Inventory</button></Link>
                     </div>
                 </div>
             </div>
