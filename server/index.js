@@ -30,7 +30,7 @@ app.get('/api/view_bins', (req, res) => {
     })
 })
 
-app.get('api/view_bins/:id', (req, res) => {
+app.get('/api/view_bins/:id', (req, res) => {
     console.log('hit')
     req.app.get('db').view_bins().then(bins => {
         console.log('hit')
