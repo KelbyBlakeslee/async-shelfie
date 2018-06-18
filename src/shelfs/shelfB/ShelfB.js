@@ -16,7 +16,7 @@ class ShelfB extends Component {
     }
 
     getBinId(bin_id) {
-        axios.get('/api/view_bins/4', {'fullBin': this.state.bin_id, 'binId': bin_id})
+        axios.get('/api/view_bins/2', {'fullBin': this.state.bin_id, 'binId': bin_id})
         .then(response => {
             console.log(response)
         })
