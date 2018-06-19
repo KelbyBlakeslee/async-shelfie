@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import './addbin.css';
 
 class AddBin extends Component {
     constructor() {
@@ -21,24 +22,24 @@ class AddBin extends Component {
 
     handleNameInput(e) {
         e.preventDefault()
-        this.setState({ name_input_box: e.target.value})
+        this.setState({ name_input_box: e.target.value })
     }
 
     handelPriceInput(e) {
         e.preventDefault()
-        this.setState({ price_input_box: e.target.value})
+        this.setState({ price_input_box: e.target.value })
     }
 
     handleImageInput(e) {
         e.preventDefault()
-        this.setState({ image_input: e.target.value})
+        this.setState({ image_input: e.target.value })
     }
 
     getNewBin(bin_id) {
-        axios.post('/api/create_bin', {'imageInput': this.state.image_input, 'nameInput': this.state.name_input_box, 'priceInput': this.state.price_input_box, 'binId': bin_id})
-        .then(response => {
-            console.log(response)
-        })
+        axios.post('/api/create_bin', { 'imageInput': this.state.image_input, 'nameInput': this.state.name_input_box, 'priceInput': this.state.price_input_box, 'binId': bin_id })
+            .then(response => {
+                console.log(response)
+            })
     }
 
 
@@ -51,13 +52,23 @@ class AddBin extends Component {
                     <input value={this.state.image_input} placeholder="paste URL here" onChange={(e) => this.handleImageInput(e)}/>
                 </div> */}
                 <div>
-                    <h2>Name</h2>
-                    <input value={this.state.name_input_box} placeholder="" onChange={(e) => this.handleNameInput(e)} />
+                    <div className="name-div">
+                        <h2 className="name">Name</h2>
+                    </div>
+                    <div className="name-input-div">
+                        <input className="name-input" value={this.state.name_input_box} placeholder="Name here" onChange={(e) => this.handleNameInput(e)} />
+                    </div>
                 </div>
                 <div>
-                    <h2>Price</h2>
-                    <input value={this.state.price_input_box} placeholder="" onChange={(e) => this.handelPriceInput(e)} />
-                    <button onClick={() => this.getNewBin('12345')}>+ Add Inventory</button>
+                    <div className="price-div">
+                        <h2 className="price">Price</h2>
+                    </div>
+                    <div className="price-input-div">
+                        <input className="price-input" value={this.state.price_input_box} placeholder="Price here" onChange={(e) => this.handelPriceInput(e)} />
+                    </div>
+                    <div className="button-div">
+                        <button className="button" onClick={() => this.getNewBin('12345')}>+ Add Inventory</button>
+                    </div>
                 </div>
             </div>
         )

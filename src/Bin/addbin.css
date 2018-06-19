@@ -1,0 +1,15 @@
+.button-div {
+    margin-top: 20px;
+    margin-left: 420px;
+}
+
+.button {
+    height: 55px;
+    width: 510px;
+    border-radius: 50px;
+    background: #40F99B;
+    border: none;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 25px;
+    font-weight: 900;
+}
