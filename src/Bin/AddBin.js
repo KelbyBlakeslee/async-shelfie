@@ -47,9 +47,9 @@ class AddBin extends Component {
     render() {
         return (
             <div>
-                <div>
+                {/* <div>
                     <input value={this.state.image_input} placeholder="paste URL here" onChange={(e) => this.handleImageInput(e)}/>
-                </div>
+                </div> */}
                 <div>
                     <h2>Name</h2>
                     <input value={this.state.name_input_box} placeholder="" onChange={(e) => this.handleNameInput(e)} />
