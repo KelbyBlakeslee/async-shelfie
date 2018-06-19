@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import './bins.css'
 
 
 class Bins extends Component {
@@ -47,20 +48,24 @@ class Bins extends Component {
                     <img src="" alt="" />
                 </div>
                 <div className="div-name">
-                    <p className="name-text">Name</p>
+                    <h2 className="name-text">Name</h2>
                 </div>
                 <div className="div-name-box">
                     <input className="name-input" value={this.state.name_box} placeholder='Enter Name' onChange={(e) => this.handleNameInput(e)} />
                 </div>
                 <div className="price-text-div">
-                    <p className="price-text">Price</p>
+                    <h2 className="price-text">Price</h2>
                 </div>
                 <div className="div-price-box">
                     <input className="price-input" value={this.state.price_box} placeholder='Enter Price' onChange={(e) => this.handlePriceInput(e)} />
                 </div>
-                <div className="edit-delete-div">
-                    <button className="edit-delete-button">EDIT</button>
-                    <button>DELETE</button>
+                <div className="div-around-buttons">
+                    <div className="edit-div">
+                        <button className="edit-button">EDIT</button>
+                    </div>
+                    <div className="delete-div">
+                        <button className="delete-button">DELETE</button>
+                    </div>
                 </div>
             </div>
 
