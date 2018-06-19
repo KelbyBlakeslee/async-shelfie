@@ -7,7 +7,7 @@ const express = require('express')
 
 
 const app = express();
-
+app.use(bodyParser.json())
 
 const {
     CONNECTION_STRING,
@@ -41,10 +41,10 @@ app.get('/api/view_bins/:id', (req, res) => {
 })
 
 app.post('/api/create_bin', (req, res) => {
-    console.log('created')
+    console.log(req.body)
     req.app.get('db')
         .create_bin([req.body.imageInput, req.body.nameInput, req.body.priceInput, req.body.binId])
-        .then(repsonse => {
+        .then(response => {
             console.log('success');
             res.status(200).send(response)
         }).catch(errorMessage => {

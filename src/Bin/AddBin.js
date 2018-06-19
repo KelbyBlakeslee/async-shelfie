@@ -15,6 +15,7 @@ class AddBin extends Component {
 
         this.handleNameInput = this.handleNameInput.bind(this);
         this.handelPriceInput = this.handelPriceInput.bind(this);
+        this.handleImageInput = this.handleImageInput.bind(this);
         this.getNewBin = this.getNewBin.bind(this);
     }
 
@@ -28,8 +29,13 @@ class AddBin extends Component {
         this.setState({ price_input_box: e.target.value})
     }
 
+    handleImageInput(e) {
+        e.preventDefault()
+        this.setState({ image_input: e.target.value})
+    }
+
     getNewBin(bin_id) {
-        axios.post('/api/create_bin', {'nameInput': this.state.name_input, 'priceInput': this.state.price_input, 'imageInput': this.state.image_input, 'binId': bin_id})
+        axios.post('/api/create_bin', {'imageInput': this.state.image_input, 'nameInput': this.state.name_input_box, 'priceInput': this.state.price_input_box, 'binId': bin_id})
         .then(response => {
             console.log(response)
         })
@@ -42,13 +48,16 @@ class AddBin extends Component {
         return (
             <div>
                 <div>
+                    <input value={this.state.image_input} placeholder="paste URL here" onChange={(e) => this.handleImageInput(e)}/>
+                </div>
+                <div>
                     <h2>Name</h2>
                     <input value={this.state.name_input_box} placeholder="" onChange={(e) => this.handleNameInput(e)} />
                 </div>
                 <div>
                     <h2>Price</h2>
                     <input value={this.state.price_input_box} placeholder="" onChange={(e) => this.handelPriceInput(e)} />
-                    <button onClick={() => this.getNewBin('newBin')}>+ Add Inventory</button>
+                    <button onClick={() => this.getNewBin('12345')}>+ Add Inventory</button>
                 </div>
             </div>
         )
