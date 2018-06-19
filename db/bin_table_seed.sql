@@ -1,6 +1,7 @@
 create table Bin (
     id serial primary key,
-    product text, 
+    bin_image text,
+    name text, 
     price text,
-    shelf varchar(1)
+    shelf_id varchar(5)
 );

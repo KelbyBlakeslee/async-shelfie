@@ -1,4 +1,4 @@
 insert into Bin 
-(image, product, price, shelf)
+(bin_image, name, price, bin_id)
 values 
 ($1, $2, $3, $4);

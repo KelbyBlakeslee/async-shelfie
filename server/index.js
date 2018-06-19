@@ -40,9 +40,10 @@ app.get('/api/view_bins/:id', (req, res) => {
     })
 })
 
-app.post('api/create_bin', (req, res) => {
+app.post('/api/create_bin', (req, res) => {
+    console.log('created')
     req.app.get('db')
-        .create_bin([req.body.userInput, req.body.productName, req.body.productPrice])
+        .create_bin([req.body.imageInput, req.body.nameInput, req.body.priceInput, req.body.binId])
         .then(repsonse => {
             console.log('success');
             res.status(200).send(response)

@@ -1,1 +1,1 @@
-select * from Bin;
+select * from bin;
