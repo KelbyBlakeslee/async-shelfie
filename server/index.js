@@ -40,6 +40,8 @@ app.get('/api/view_bins/:id', (req, res) => {
     })
 })
 
+// CRUD for Bins
+
 app.post('/api/create_bin', (req, res) => {
     console.log(req.body)
     req.app.get('db')
@@ -50,6 +52,15 @@ app.post('/api/create_bin', (req, res) => {
         }).catch(errorMessage => {
             console.log(errorMessage)
         })
+})
+
+app.delete('api/bin/:id', (req, res) => {
+    bin.forEach((bin, index) => {
+        if (bin.id === Number(req.params.id)) {
+            bin.splice(index, 1)
+        }
+    })
+    res.status(200).send('Deleted Bin')
 })
 
 

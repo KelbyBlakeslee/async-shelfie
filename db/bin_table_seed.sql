@@ -1,4 +1,4 @@
-create table Bin (
+create table bin (
     id serial primary key,
     bin_image text,
     name text, 
