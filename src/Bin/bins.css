@@ -42,12 +42,8 @@
 .edit-button {
     height: 45px;
     width: 150px;
-    border-radius: 30px;
-    background: #40F99B;
+    border-radius: 10px;
     border: none;
-}
-
-.edit-button {
     font-family: 'Open Sans', sans-serif;
     font-size: 25px;
     font-weight: 900;
@@ -57,6 +53,17 @@
     height: 45px;
     width: 150px;
     border-radius: 10px;
+    border: none;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 25px;
+    font-weight: 900;
+}
+
+.save-button { 
+    height: 45px;
+    width: 150px;
+    border-radius: 30px;
+    background: #40F99B;
     border: none;
     font-family: 'Open Sans', sans-serif;
     font-size: 25px;

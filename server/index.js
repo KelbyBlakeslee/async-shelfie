@@ -19,7 +19,7 @@ const {
 massive(CONNECTION_STRING).then((db) => {
     console.log('db connected')
     app.set('db', db)
-})
+});
 
 app.get('/api/view_bins', (req, res) => {
     console.log('hit it')
@@ -28,7 +28,7 @@ app.get('/api/view_bins', (req, res) => {
     }).catch(errorMessage => {
         console.log(errorMessage)
     })
-})
+});
 
 app.get('/api/view_bins/:id', (req, res) => {
     console.log('hit')
@@ -38,7 +38,7 @@ app.get('/api/view_bins/:id', (req, res) => {
     }).catch(errorMessage => {
         console.log(errorMessage)
     })
-})
+});
 
 // CRUD for Bins
 
@@ -52,16 +52,18 @@ app.post('/api/create_bin', (req, res) => {
         }).catch(errorMessage => {
             console.log(errorMessage)
         })
-})
+});
 
-app.delete('api/bin/:id', (req, res) => {
+app.delete('/api/bin/:id', (req, res) => {
+    console.log('deleting')
     bin.forEach((bin, index) => {
         if (bin.id === Number(req.params.id)) {
             bin.splice(index, 1)
+            console.log('deleted')
         }
     })
     res.status(200).send('Deleted Bin')
-})
+});
 
 
 
@@ -70,4 +72,4 @@ app.delete('api/bin/:id', (req, res) => {
 //SERVER
 app.listen(SERVER_PORT, () => {
     console.log(`We are many, You are one on ${SERVER_PORT}`)
-})
+});
