@@ -8,17 +8,14 @@ import ShelfD from '../shelfs/shelfD/ShelfD';
 import Bins from '../Bin/Bins';
 import AddBin from '../Bin/AddBin';
 
-export default(
-    
-    // <HashRouter>
-        <Switch>
-            <Route exact path="/" component={Home} />
-            <Route exact path="/ShelfA" component={ShelfA} />
-            <Route exact path="/ShelfB" component={ShelfB} />
-            <Route exact path="/ShelfC" component={ShelfC} />
-            <Route exact path="/ShelfD" component={ShelfD} />
-            <Route exact path="/Bins" component={Bins}/>
-            <Route exact path="/AddBin" component={AddBin} />
-        </Switch>
-    // </HashRouter>
+export default (
+    <Switch>
+        <Route exact path="/" component={Home} />
+        <Route exact path="/ShelfA" component={ShelfA} />
+        <Route exact path="/ShelfB" component={ShelfB} />
+        <Route exact path="/ShelfC" component={ShelfC} />
+        <Route exact path="/ShelfD" component={ShelfD} />
+        <Route exact path="/Bins" component={Bins} />
+        <Route exact path="/AddBin" component={AddBin} />
+    </Switch>
 )

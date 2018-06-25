@@ -4,8 +4,8 @@ import './bins.css'
 
 
 class Bins extends Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
 
         this.state = {
             name_box: '',
@@ -33,24 +33,20 @@ class Bins extends Component {
         this.setState({ price_box: e.target.value })
     }
 
-    handleDelete(e) {
-        e.preventDefault();
-        this.setState({ id: e.target.value })
-    }
-
-
-    getNewBin(new_bin) {
-        axios.post('/api/create_bin', { 'userInput': this.state.user_input, 'productName': this.state.product_name, 'productPrice': this.state.product_price })
+    getNewBin(bin_id) {
+        axios.post('/api/create_bin', { 'userInput': this.state.user_input, 'productName': this.state.product_name, 'productPrice': this.state.product_price, 'binId': bin_id })
             .then(response => {
                 console.log(response)
             })
     }
 
-    deleteBin() {
-        axios.delete('/api/Bins', this.state.id)
-        .then(response => {
-            console.log(response)
-        })
+    deleteBin(bin_id) {
+        const { match: { params } } = this.props;
+
+        axios.delete(`/api/delete_bin/${params.shelfId}`, {'binId': bin_id})
+            .then(response => {
+                console.log(response)
+            })
     }
 
 
@@ -78,9 +74,10 @@ class Bins extends Component {
                 <div className="div-around-buttons">
                     <div className="edit-div">
                         <button className="edit-button">EDIT</button>
+                        {/* <button>SAVE</button> */}
                     </div>
                     <div className="delete-div">
-                        <button className="delete-button" onClick={(e) => this.handleDelete(e)}>DELETE</button>
+                        <button className="delete-button" onClick={(e) => this.deleteBin(this.binId)}>DELETE</button>
                     </div>
                 </div>
             </div>

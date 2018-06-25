@@ -5,8 +5,8 @@ import './shelf.css';
 
 
 class ShelfA extends Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
 
         this.state = {
             bin_id: {}
@@ -14,7 +14,9 @@ class ShelfA extends Component {
     }
 
     getBinId(bin_id) {
-        axios.get('/api/view_bins/1', { 'fullBin': this.state.bin_id, 'binId': bin_id })
+        const { match: { params } } = this.props;
+
+        axios.get(`/api/view_bins/${params.binId}`, { 'fullBin': this.state.bin_id, 'binId': bin_id })
             .then(response => {
                 console.log(response)
             })

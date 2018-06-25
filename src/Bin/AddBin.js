@@ -3,8 +3,8 @@ import axios from 'axios';
 import './addbin.css';
 
 class AddBin extends Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
 
         this.state = {
             name_input: '',
@@ -36,7 +36,9 @@ class AddBin extends Component {
     }
 
     getNewBin(bin_id) {
-        axios.post('/api/create_bin', { 'imageInput': this.state.image_input, 'nameInput': this.state.name_input_box, 'priceInput': this.state.price_input_box, 'binId': bin_id })
+        const { match: { params } } = this.props;
+
+        axios.post(`/api/create_bin/${params.binId}`, { 'imageInput': this.state.image_input, 'nameInput': this.state.name_input_box, 'priceInput': this.state.price_input_box, 'binId': bin_id })
             .then(response => {
                 console.log(response)
             })
@@ -67,7 +69,7 @@ class AddBin extends Component {
                         <input className="price-input" value={this.state.price_input_box} placeholder="Price here" onChange={(e) => this.handelPriceInput(e)} />
                     </div>
                     <div className="button-div">
-                        <button className="button" onClick={() => this.getNewBin('12345')}>+ Add Inventory</button>
+                        <button className="button" onClick={() => this.getNewBin(this.bin_id)}>+ Add Inventory</button>
                     </div>
                 </div>
             </div>

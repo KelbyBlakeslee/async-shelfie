@@ -1,0 +1,1 @@
+delete from bin where id = $1 and shelf_id = $2;

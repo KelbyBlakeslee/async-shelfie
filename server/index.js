@@ -42,7 +42,7 @@ app.get('/api/view_bins/:id', (req, res) => {
 
 // CRUD for Bins
 
-app.post('/api/create_bin', (req, res) => {
+app.post('/api/create_bin/:shelfId', (req, res) => {
     console.log(req.body)
     req.app.get('db')
         .create_bin([req.body.imageInput, req.body.nameInput, req.body.priceInput, req.body.binId])
@@ -54,15 +54,16 @@ app.post('/api/create_bin', (req, res) => {
         })
 });
 
-app.delete('/api/bin/:id', (req, res) => {
-    console.log('deleting')
-    bin.forEach((bin, index) => {
-        if (bin.id === Number(req.params.id)) {
-            bin.splice(index, 1)
-            console.log('deleted')
-        }
-    })
-    res.status(200).send('Deleted Bin')
+app.delete('/api/delete_bin/:binId', (req, res) => {
+    console.log(req.params)
+    req.app.delete('db')
+        .delete_bin([req.params.id, req.params.shelf_id])
+        .then(response => {
+            console.log('deleted');
+            res.status(200).send(response)
+        }).catch(errorMessage => {
+            console.log(errorMessage);
+        })
 });
 
 
