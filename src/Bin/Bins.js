@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import './bins.css'
+import './bins.css';
+import { Link } from 'react-router-dom';
 
 
 class Bins extends Component {
@@ -40,10 +41,10 @@ class Bins extends Component {
             })
     }
 
-    deleteBin(bin_id) {
+    deleteBin(shelfId) {
         const { match: { params } } = this.props;
 
-        axios.delete(`/api/delete_bin/${params.shelfId}`, {'binId': bin_id})
+        axios.delete(`/api/delete_bin/${params.shelfId}`)
             .then(response => {
                 console.log(response)
             })
@@ -77,7 +78,7 @@ class Bins extends Component {
                         {/* <button>SAVE</button> */}
                     </div>
                     <div className="delete-div">
-                        <button className="delete-button" onClick={(e) => this.deleteBin(this.binId)}>DELETE</button>
+                        <button className="delete-button" onClick={(e) => this.deleteBin('')}>DELETE</button>
                     </div>
                 </div>
             </div>

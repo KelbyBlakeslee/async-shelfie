@@ -3,5 +3,5 @@ create table bin (
     bin_image text,
     name text, 
     price text,
-    shelf_id varchar(5)
+    shelf_id varchar(9)
 );

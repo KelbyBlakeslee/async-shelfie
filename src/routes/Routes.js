@@ -15,7 +15,7 @@ export default (
         <Route exact path="/ShelfB" component={ShelfB} />
         <Route exact path="/ShelfC" component={ShelfC} />
         <Route exact path="/ShelfD" component={ShelfD} />
-        <Route exact path="/Bins" component={Bins} />
+        <Route exact path="/Bins/:id" component={Bins} />
         <Route exact path="/AddBin" component={AddBin} />
     </Switch>
 )
