@@ -1,1 +1,4 @@
-delete from bin where id = $1;
+update inventory 
+set name = '',
+price = null
+where id = $1;

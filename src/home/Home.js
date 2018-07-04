@@ -8,16 +8,16 @@ export default function Home() {
         <div className="Div-around-buttons">
             <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"></link>
             <div className="Shelf-A">
-                <Link to="/ShelfA" ><button className="Shelf-Button">Shelf A</button></Link>
+                <Link to="/Shelves/A" ><button className="Shelf-Button">Shelf A</button></Link>
             </div>
             <div className="Shelf-B">
-                <Link to="/ShelfB" ><button className="Shelf-Button">Shelf B</button></Link>
+                <Link to="/Shelves/B" ><button className="Shelf-Button">Shelf B</button></Link>
             </div>
             <div className="Shelf-C">
-                <Link to="/ShelfC" ><button className="Shelf-Button">Shelf C</button></Link>
+                <Link to="/Shelves/C" ><button className="Shelf-Button">Shelf C</button></Link>
             </div>
             <div className="Shelf-D">
-                <Link to="/ShelfD" ><button className="Shelf-Button">Shelf D</button></Link>
+                <Link to="/Shelves/D" ><button className="Shelf-Button">Shelf D</button></Link>
             </div>
         </div>
     )

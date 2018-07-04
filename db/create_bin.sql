@@ -1,4 +1,4 @@
-insert into Bin 
-(bin_image, name, price, shelf_id)
-values 
-($1, $2, $3, $4);
+update inventory  
+set name = $1, 
+price = $2
+where id = $3

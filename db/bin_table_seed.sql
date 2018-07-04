@@ -1,7 +1,8 @@
-create table bin (
+create table inventory (
     id serial primary key,
-    bin_image text,
     name text, 
-    price text,
-    shelf_id varchar(9)
+    price float,
+    image text, 
+    shelf_id varchar(1),
+    bin_num integer
 );
